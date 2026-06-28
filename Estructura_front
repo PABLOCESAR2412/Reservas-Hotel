@@ -1,0 +1,3 @@
+ng new hotel-registro --style=scss --routing=true
+cd hotel-registro
+ng generate component registro-huespedes
