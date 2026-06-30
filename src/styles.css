@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  /* Azul Marino Corporativo (Modo Claro) */
+  --bs-primary: #1e3a8a;
+  --bs-primary-rgb: 30, 58, 138;
+}
+
+/* Adaptación manual y estética del Modo Oscuro */
+[data-bs-theme="dark"] {
+  /* Azul más claro para que los textos primarios resalten en fondo oscuro */
+  --bs-primary: #60a5fa;
+  --bs-primary-rgb: 96, 165, 250;
+  
+  /* Fondo general más suave que el negro puro */
+  --bs-body-bg: #0f172a; /* Slate 900 */
+  --bs-body-color: #f8fafc;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sidebar Styling */
+.custom-sidebar {
+  background-color: #1e3a8a;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .custom-sidebar {
+  background-color: #020617; /* Slate 950 */
+  border-right: 1px solid #1e293b;
+}
+
+/* Botones personalizados que adaptan su color */
+.btn-primary-custom {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-primary-custom:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .btn-primary-custom {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+[data-bs-theme="dark"] .btn-primary-custom:hover {
+  background-color: #60a5fa;
+  color: #ffffff;
+}
+
+/* Tarjetas (Cards) para modo oscuro */
+[data-bs-theme="dark"] .card {
+  background-color: #1e293b;
+  border: 1px solid #334155 !important;
+}
+
+/* Tablas para modo oscuro */
+[data-bs-theme="dark"] .table {
+  --bs-table-bg: #1e293b;
+  --bs-table-color: #f8fafc;
+  --bs-table-hover-bg: #334155;
+  border-color: #334155;
+}
+[data-bs-theme="dark"] .table-light {
+  --bs-table-bg: #0f172a;
+  --bs-table-color: #cbd5e1;
+  border-color: #334155;
+}
+
+/* Modales para modo oscuro */
+[data-bs-theme="dark"] .modal-content {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+}
+[data-bs-theme="dark"] .modal-header,
+[data-bs-theme="dark"] .modal-footer {
+  border-color: #334155 !important;
+}
+[data-bs-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Formularios en modo oscuro */
+[data-bs-theme="dark"] .form-control {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #f8fafc;
+}
+[data-bs-theme="dark"] .form-control:focus {
+  background-color: #0f172a;
+  border-color: #3b82f6;
+  color: #f8fafc;
+  box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+[data-bs-theme="dark"] .text-secondary {
+  color: #94a3b8 !important; /* Texto secundario más legible */
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb { background: #475569; }
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: #64748b; }
